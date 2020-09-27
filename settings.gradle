@@ -1,0 +1,6 @@
+include ':postfeature'
+include ':utils'
+include ':core-resources'
+include ':app-core'
+include ':app'
+rootProject.name='typicalmoduleapp'

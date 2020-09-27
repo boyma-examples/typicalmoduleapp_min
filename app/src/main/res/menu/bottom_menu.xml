@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/firsttab_navigation"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="@string/bot_title_second" />
+
+    <item
+        android:id="@+id/secondtab_navigation"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="@string/bot_title_second" />
+
+</menu>

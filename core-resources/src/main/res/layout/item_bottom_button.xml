@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="enabled"
+            type="Boolean" />
+
+        <variable
+            name="text"
+            type="String" />
+
+        <variable
+            name="visible"
+            type="Boolean" />
+
+        <variable
+            name="onClickCallback"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@color/colorPrimary"
+        android:minHeight="64dp"
+        android:visibility="@{visible ? View.VISIBLE : View.GONE, default = visible}">
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:backgroundTint="@{enabled ? @color/colorPrimary : @color/gray1}"
+            android:enabled="@{enabled}"
+            android:fontFamily="@font/montserrat_extrabold"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+            android:letterSpacing="0.01"
+            android:onClick="@{() -> onClickCallback.onClick(button)}"
+            android:text="@{text}"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:textSize="16sp"
+            app:cornerRadius="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Button" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

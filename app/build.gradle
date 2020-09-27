@@ -1,0 +1,43 @@
+apply plugin: 'com.android.application'
+apply from: '../common.gradle'
+
+android {
+
+    defaultConfig {
+        applicationId "ru.typicalmoduleapp.typicalmoduleapp"
+    }
+
+    signingConfigs {
+        config {
+            keyAlias 'key0'
+            keyPassword '123456'
+            storeFile file('../default_keystore.jks')
+            storePassword '123456'
+        }
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.config
+        }
+
+        release {
+            signingConfig signingConfigs.config
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), '../proguard-rules.pro'
+        }
+
+        fortest {
+            initWith release
+        }
+    }
+
+}
+
+dependencies {
+    implementation project(':app-core')
+    implementation project(':core-resources')
+    implementation project(':utils')
+
+    implementation project(':postfeature')
+}

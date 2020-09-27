@@ -1,0 +1,56 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:letterSpacing">-0.01</item>
+    </style>
+
+    <!-- bottom style-->
+    <style name="BottomNavigationView">
+        <item name="itemTextAppearanceActive">@style/TextAppearance.BottomNavigationView.Active
+        </item>
+        <item name="itemTextAppearanceInactive">
+            @style/TextAppearance.BottomNavigationView.Inactive
+        </item>
+    </style>
+
+    <style name="TextAppearance" />
+
+    <style name="TextAppearance.BottomNavigationView" />
+
+    <style name="TextAppearance.BottomNavigationView.Inactive">
+        <item name="android:textSize">11sp</item>
+        <item name="fontFamily">@font/montserrat_bold</item>
+    </style>
+
+    <style name="TextAppearance.BottomNavigationView.Active">
+        <item name="android:textSize">11sp</item>
+        <item name="fontFamily">@font/montserrat_bold</item>
+    </style>
+    <!-- bottom style-->
+
+    <style name="ItemTextTitle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/montserrat_medium</item>
+        <item name="android:textColor">@color/gray1</item>
+    </style>
+
+    <style name="ItemTextSubTitle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/montserrat_semibold</item>
+        <item name="android:textColor">@color/textColor</item>
+    </style>
+
+    <!--bottomdialogroundstyle-->
+    <style name="AppBottomSheetDialogTheme" parent="ThemeOverlay.MaterialComponents.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+    </style>
+
+    <style name="AppModalStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/rounddialog_back</item>
+    </style>
+    <!--bottomdialogroundstyle-->
+
+</resources>
